@@ -1,0 +1,377 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #2c3e50;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section 1 - Logo et titre */
+.section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.section1 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section nousCoesya */
+.nousCoesya {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.nousCoesya h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.nousCoesya h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #e74c3c);
+    border-radius: 2px;
+}
+
+.nousCoesya p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:first-child {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+}
+
+.cta-button.secondary {
+    background: white;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:first-child:hover {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+.cta-button.secondary:hover {
+    background: #3498db;
+    color: white;
+}
+
+
+/* Styles pour la section Equipe */
+.bloc_equipe {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.membre {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    transition: all 0.3s ease;
+}
+
+.membre:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.membre-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.membre-image i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.membre h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.membre .role {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.membre p:last-child {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/*nousCoesya2 - Atout*/
+
+.nousCoesya_2 {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.nousCoesya_2 .case {
+    flex: 1;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(52, 152, 219, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+}
+
+.nousCoesya_2 .case:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #2c3e50, #e74c3c);
+    transform: scaleX(1);
+}
+
+.nousCoesya_2 .case:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.nousCoesya_2 .Bloc_Atouts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.nousCoesya_2 .Contenu_Atouts {
+    text-align: center;
+    flex: 1;
+    padding: 0 10px;
+}
+
+.nousCoesya_2 .Contenu_Atouts i {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    display: inline-block;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nousCoesya_2 .Contenu_Atouts h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.nousCoesya_2 .Contenu_Atouts p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.nousCoesya_2 .main-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nousCoesya_2 .Atouts h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.nousCoesya_2.Atouts p {
+    color: #7f8c8d;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+
+
+/* Mentions légales */
+.mention {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.mention p {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mention p:hover {
+    color: #3498db;
+}
+
+/* Responsive design pour la page "Qui nous sommes" */
+@media (max-width: 900px) {
+    .bloc_equipe {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .membre {
+        max-width: 100%;
+    }
+    
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .value-item {
+        max-width: 100%;
+    }
+    .nousCoesya_2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nousCoesya_2 .case {
+        max-width: 100%;
+        min-height: auto;
+    }
+    
+    .nousCoesya_2 .Bloc_Atouts {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) { 
+    .membre {
+        padding: 20px 15px;
+    }
+    
+    .membre-image {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .membre-image i {
+        font-size: 2rem;
+
+    }
+        .nousCoesya_2.unified .case {
+        padding: 25px 20px;
+    }
+    
+    .nousCoesya_2.unified .main-icon {
+        font-size: 3rem;
+    }
+}

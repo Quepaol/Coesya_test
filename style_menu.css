@@ -1,0 +1,169 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* Conteneur du menu */
+.menu {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Liste du menu */
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Éléments du menu */
+.menu li {
+    position: relative;
+}
+
+/* Liens du menu */
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 18px 25px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Animation au survol */
+.menu a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: #e74c3c;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu a:hover:before {
+    width: 80%;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* Style pour la page active */
+.menu a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menu a.active:before {
+    width: 80%;
+    background-color: #f1c40f;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .menu ul {
+        flex-wrap: wrap;
+    }
+    
+    .menu a {
+        padding: 15px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu a {
+        display: block;
+        padding: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu a:last-child {
+        border-bottom: none;
+    }
+    
+    .menu a:before {
+        display: none;
+    }
+}
+
+/* Contenu de démonstration */
+.content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.content h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.content p {
+    font-size: 18px;
+    color: #7f8c8d;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Ajout d'un effet de pulsation pour le logo */
+.content h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.content h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #e74c3c);
+    border-radius: 3px;
+}
+
+/* Animation d'entrée pour le contenu */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content {
+    animation: fadeIn 0.8s ease-out;
+}
