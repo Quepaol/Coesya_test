@@ -1,15 +1,10 @@
-# Initialisez un dépôt Git local (si ce n'est pas déjà fait)
 git init
 
-# Ajoutez tous vos fichiers au suivi Git
-git add .
 
-# Créez une première sauvegarde (commit)
+git add .
 git commit -m "Initial commit - Premier déploiement"
 
-# Liez votre dépôt local à GitHub (remplacez par l'URL de VOTRE dépôt)
-git remote add origin https://github.com/votre-username/nom-de-votre-repo.git
+git remote add origin [https://github.com/votre-username/nom-de-votre-repo.git](https://github.com/Quepaol/Coesya_test.git)
 
-# Poussez votre code vers la branche principale (souvent 'main' ou 'master')
 git branch -M main
 git push -u origin main
